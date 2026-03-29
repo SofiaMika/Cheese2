@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Сыр&Хвост</title>
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <script src="script.js" defer></script> 
+    <link rel="icon" href="images/icon.png" type="image/png">
+    <script src="https://cdn.jsdelivr.net/npm/tone@14.8.49/build/Tone.js"></script>
+</head>
+<body>
+
+  <div class="bluOne">
+    <div> <img src="images/logotype.svg" class = "logotype"></div>
+ </div>
+    <div class="bluTwo">
+         <img src="images/mouse-rotate-left.svg" class="mouseLeft">
+         <img src="images/mouse-rotate-right.svg" class="mouseRigth">
+        <img src="images/buttonNew.svg" id="button">
+    </div>
+
+        <div class="placeTwo">
+    <!--2 экран -->
+           <div class="bluBla1"> <p class="Text">Добро пожаловать в город Мышки. 
+            <br>Здесь все из сыра.</p></div>
+            <div class="bluBla2"><p class="Text2">
+Помогите жителям с их работой и бытом и выиграйте тысячелетний сыр.</p></div>
+            <img src="images/buttonNext.svg" id="buttonNext">
+            <img src="images/mouseRight-scr2.svg" class="mouseScr2">
+</div>
+
+    <div class="placeThree">
+    <div class="bluLineOne">
+        <p>ЛАБИРИНТ. ПОМОГИ МЫШКЕ ДОБРАТЬСЯ ДО РАБОТЫ И НАПОЛНИТЬ ХОЛОДИЛЬНИК!(ИСПОЛЬЗУЙ СТРЕЛОЧКИ НА КЛАВИАТУРЕ)</p>
+    </div>
+    <p class="bluTextsmall">КАЖЕТСЯ ЕДА ЗАКОНЧИЛАСЬ...</p>
+    <div class="blockBlu"><div class="holodilnik">
+        <img src="images/emptyRefrigerator.svg" class="holodilnik" id="emptyFridge"></div>
+        <div class="cheesesContent">
+            <!-- <img src="images/cheese-1.svg" class="ch1">
+                        <img src="images/cheese-1.svg" class="ch2">
+            <img src="images/cheese-1.svg" class="ch3">
+            <img src="images/cheese-1.svg" class="ch4">
+                        <img src="images/cheese-1.svg" class="ch5">
+            <img src="images/cheese-1.svg" class="ch6"> -->
+        </div>
+
+    </div>
+   <!-- Мышка которая исчезает -->
+    <img src="images/mouseScrThree.svg" class="mouseScrThree" id="disappearingMouse">
+     <!-- Лабиринт -->
+    <div id="game-container">
+        <div class="score">Очки: <span id="score">0</span></div>
+        <div id="maze"></div>
+    </div>
+    
+    <div><img src="images/returnbtn.svg" id="restartGame" class="restart-btn"></div>
+
+         <div class="bluLineTwo">
+            <p class="capsText"> ПРОИГРЫВАТЕЛЬ МУЗЫКИ ОТ МЫШКИНА ПРОИГРЫВАТЕЛЬ ОТ МЫШКИНА ПРОИГРЫВАТЕЛЬ ОТ МЫШКИНА ПРОИГРЫВАТЕЛЬ ОТ МЫШКИНА</p>
+        </div>
+            <div><img src="images/disko-disk.svg" class="disco-disk"></div>
+            <div><img src="images/disco-igla.svg" class="disco-igla"></div>
+            <div><img src="images/starrt.svg" class="startButton"></div>
+            <div><img src="images/stop.svg" class="stopButton"></div> 
+            <audio id="player" src="audio/melodia.mp3"></audio>
+            
+          <div class="bluLineThree">
+            <p class="capsText">МЫШИНАЯ ДИСКОТЕКА МЫШИНАЯ ДИСКОТЕКА</p>
+        </div>
+
+          <div class="musicContainer">
+        <div class="note">
+        <div class="musicNote" data-note="C4" data-key="1"></div>
+        <div class="musicNote" data-note="D4" data-key="2"></div>
+        <div class="musicNote" data-note="E4" data-key="3"></div>
+        <div class="musicNote" data-note="F4" data-key="4"></div>
+        <div class="musicNote" data-note="G4" data-key="5"></div>
+        <div class="musicNote" data-note="A4" data-key="6"></div>
+        <div class="musicNote" data-note="B4" data-key="7"></div>
+        </div>
+        <div class="sharp">
+        <div class="musicSharp" data-note="C#4" data-key="q"></div>
+        <div class="musicSharp" data-note="D#4" data-key="w"></div>
+        <div class="musicSharp mnone" ></div>
+        <div class="musicSharp" data-note="F#4" data-key="e"></div>
+        <div class="musicSharp" data-note="G#4" data-key="r"></div>
+        <div class="musicSharp" data-note="A#4" data-key="t"></div>
+        <div class="musicSharp mnone"></div>
+        </div>
+    </div>
+
+</body>
+</html>

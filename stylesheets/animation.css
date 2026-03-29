@@ -1,0 +1,27 @@
+@keyframes changemouseScrThree {
+    0%, 29% {
+        content: url('../images/mouseScrThree.svg');
+        opacity: 1;
+    }
+    30%, 59% {
+        content: url('../images/mouseScrThree\ \(2\).svg');
+        opacity: 1;
+    }
+    60%, 63% {
+        opacity: 1;
+    }
+    64% {
+        opacity: 0;
+    }
+    65%, 89% {
+        content: url('../images/mouseScrThree3.svg');
+        opacity: 1;
+    }
+    90%, 99% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0; 
+        visibility: hidden;
+    }
+}

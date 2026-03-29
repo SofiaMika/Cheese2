@@ -1,0 +1,597 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  overflow-x: hidden;
+  line-height: 1.2;
+}
+
+body {
+  background-color: #fff422;
+  margin: 0;
+  padding: 0;
+  font-family: "TT Chocolates Edu";
+  font-weight: 700;
+  /*cursor: none;*/
+}
+
+.bluOne {
+  position: relative;
+  display: flex;
+  background-color: #150e2e;
+  width: 1000px;
+  max-width: 1185px;
+  height: 194px;
+  left: 135px;
+  margin-top: 28px;
+  border-radius: 24px;
+  /* margin-bottom: 30px; */
+}
+
+.bluTwo {
+  position: relative;
+  display: flex;
+  overflow: hidden;
+  background-color: #150e2e;
+  width: 1000px;
+  max-width: 1185px;
+  height: 406px;
+  left: 135px;
+  margin-top: 25px;
+  border-radius: 24px;
+  /* margin-bottom: 30px; */
+}
+.logotype {
+  display: flex;
+  justify-content: center;
+  width: 700px;
+  height: 148px;
+  margin-left: 150px;
+  margin-top: 16px;
+}
+
+#button {
+     position: relative;
+   top: 10vw;
+    left: -12vw;
+    transform: translateX(-50%);
+    width: 282px;
+    height: 87px;
+}
+
+@keyframes floatWave {
+  0% {
+    transform: translateX(-50%) translateY(0px) rotate(0deg);
+  }
+  25% {
+    transform: translateX(-50%) translateY(-4px) rotate(-1deg);
+  }
+  50% {
+    transform: translateX(-50%) translateY(0px) rotate(1deg);
+  }
+  75% {
+    transform: translateX(-50%) translateY(4px) rotate(-0.5deg);
+  }
+  100% {
+    transform: translateX(-50%) translateY(0px) rotate(0deg);
+  }
+}
+
+#button {
+  position: absolute;
+  left: 50%;
+  bottom: 50%;
+
+  transform: translate(-50%, 50%);
+  width: 282px;
+
+  animation: floatWave 3.5s ease-in-out infinite;
+}
+
+.mouseLeft {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 360px;
+  transform-origin: bottom left;
+  transform: translate(-3%, 5%) rotate(-18deg);
+}
+
+.mouseRigth {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 360px;
+  transform-origin: bottom right;
+  transform: translate(8%, 4%) rotate(14deg);
+}
+
+.placeTwo{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #FFF422;
+    z-index: 100;
+    display: none; 
+}
+
+.bluBla1{
+    position: relative;
+    display: flex;
+    background-color: #150E2E;
+    width: 1000px;
+    max-width: 1185px;
+    height: 194px;
+    left:10vw; 
+    margin-top: 5vw;
+    border-radius: 24px;
+}
+
+.Text{
+    position: relative;
+    left: 5vw;
+    color: #FFF422;
+    font-weight: 800;
+    font-size: 48px;
+    top: 3vw;
+}
+
+.Text2{
+  position: relative;
+    left: 5vw;
+    color: #F64A22;
+    font-weight: 700;
+    font-size: 46px;
+    top: 5vw;
+}
+
+.bluBla2{
+    position: relative;
+    display: flex;
+    background-color: #150E2E;
+    width: 1000px;
+    max-width: 1185px;
+    height: 294px;
+    left:10vw; 
+    margin-top:1vw;
+    border-radius: 24px;
+}
+#buttonNext{
+    position: absolute;
+    top: 35vw;
+    left: 48vw;
+    transform: translateX(-50%);
+    width: 70px;
+    height: 70px;
+}
+
+.mouseScr2 {
+  position: absolute;
+   top: 45%;  
+    left: 85%;
+    transform: translateX(-50%);
+    width: 260px;
+    height: 309px;
+}
+
+.placeThree {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #FFF422;
+    z-index: 100;
+    display: none;
+    overflow-y: auto;  
+    overflow-x: hidden;
+}
+
+.bluLineOne{
+    position: relative;
+    background-color: #150E2E;
+    top: 0 auto;
+    width: 100%;
+    height: 115px;
+    display: flex;
+}
+p {
+    display: flex;
+    position: relative;
+    top: 15px;
+    left: 20px;
+    font-size: 35px;
+    color: #FFF422;
+}
+  .blockBlu {
+    border-radius: 50px;
+    background-color: #150E2E;
+    width: 396px;
+    height: 296px;
+    position: absolute;
+    margin-top: 2%;
+    margin-left: 5%;
+}
+
+.bluTextsmall{
+    left: 3vw;
+    display: flex;
+    position: relative;
+    top: 15px;
+    font-size: 35px;
+    color:#150E2E;
+}
+
+/* Пустой холодильник (показывается сначала) */
+.holodilnik {
+    position: absolute;
+    transform: translate(-50%);
+    margin-left: 51%;
+    margin-top: 4%;
+    z-index: 1;
+}
+/* 
+.cheesesContent{
+    display: none;
+    position: relative;
+}
+.ch1, .ch2 , .ch3, .ch4, .ch5, .ch6 {
+    position: relative;
+    padding: 1vw;
+    
+} */
+/* .holodilnik:hover {
+    animation-name: emptyFull;
+    animation-duration: 3s;
+    background-image: image(url/images);
+} */
+
+/* Мышка в центре (исчезает) */
+.mouseScrThree {
+    position: absolute;
+    bottom: 89px;  
+    left: 48%;
+    transform: translateX(-50%);
+    width: 260px;
+    height: 309px;
+    animation: changemouseScrThree 9s forwards;
+}
+
+/* Лабиринт - мышка появляется ПОСЛЕ исчезновения центральной мышки */
+#game-container {
+    position: absolute;
+    right: 7%; 
+    top: 18%; 
+    text-align: center;
+    z-index: 10;
+}
+
+#maze {
+    width: 400px;
+    height: 400px;
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: repeat(10, 1fr);
+    background: #150E2E;
+    border: 4px solid #F64A22;
+    margin: 0 auto 20px;
+    /* Скрываем до времени */
+    /* opacity: 0;
+    animation: showMaze 0.5s ease-out 9s forwards; */
+}
+
+/* @keyframes showMaze {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+} */
+
+.cell {
+    box-sizing: border-box;
+    border: 1px solid rgba(241, 196, 15, 0.1);
+}
+
+.wall {
+    background: #F64A22;
+}
+
+.path {
+    background: #150E2E;
+}
+
+.mouse {
+    background-image: url('../images/mouseinLabirint.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.exit {
+    background-image: url('../images/cheseHouse.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.cheese {
+    background: #150E2E;
+    background-image: url('../images/cheese.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.score {
+    display: flex;
+    position: relative;
+    top: 15px;
+    font-size: 35px;
+    color:#150E2E;
+    margin-bottom: 15px;
+}
+
+.controls {
+    color: #FFF422;
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+.restart-btn {
+   margin-top: 470px;
+   margin-left: 70%;
+    transform: translateX(-50%);
+    width: 282px;
+    height: 87px;
+    transition: all 0.3s ease;
+}
+
+.restart-btn:hover {
+    transform: scale(1.05);
+}
+
+.restart-btn:active {
+    transform: scale(0.5);
+}
+
+.bluLine {
+    background-color: #150E2E;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 130px;
+}
+.bluLineTwo {
+    position: relative; 
+    background-color: #150E2E;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 75px;
+    top: 45px;
+    overflow: hidden;
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+
+.bluLineThree {
+    position: relative; 
+    background-color: #150E2E;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 75px;
+    top: 592px; 
+    overflow: hidden;
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+
+.capsText {
+    display: flex;
+    position: relative;
+    font-weight: 700;
+    top: auto;
+    animation-name: text;
+    font-size: 40px;
+    animation-name: text;
+}
+
+.bluLineTwo,
+.bluLineThree
+.capsText {
+ overflow: hidden;
+    position: relative;
+} 
+.bluLineTwo,
+.capsText {
+  width: 100%;
+    min-width: 0; 
+} 
+
+.capsText {
+    display: inline-flex;
+    white-space: nowrap;
+    animation: horizontal-marquee 10s linear infinite;
+    animation-iteration-count: infinite;
+}
+@keyframes horizontal-marquee {
+    50% { transform: translateX(0); }
+    100%   { transform: translateX(-50%); }
+}
+
+.bluLineTwo,
+.bluLineThree,
+.capsText {
+     animation-duration: 10s;
+}
+
+.capsText {
+     display: inline-flex;
+    white-space: nowrap;
+    animation: marquee-x 10s linear infinite;
+}
+@keyframes marquee-x {
+    from { transform: translateX(0); }
+    to   { transform: translateX(-33.333%); }
+}
+
+.disco-disk {
+    position:relative;
+    left: 47%;
+    top:52vh;
+    height: 500px;
+    width: 550px;
+    transform: translate(-50%, -50%);
+    animation: disco-rotate 12s linear infinite;
+}
+
+@keyframes disco-rotate {
+    from {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+    to {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+
+.disco-igla{
+    position:relative;
+    left: 58vw;
+    top: -39vw;
+    height: 600px;
+    width: 400px;
+
+    transform-origin: 70% 20%; 
+    transition: transform 0.6s ease;
+}
+
+.igla-start {
+    transform: rotate(30deg);
+}
+
+.igla-stop {
+    transform: rotate(0deg);
+}
+
+/* .disck-igla:hover{
+    animation-rotation deg 
+} */
+.startButton {
+    position: relative;
+    top: -85vh;
+    left: 22%;
+    height: 157px;
+    width: 157px;
+}
+
+.stopButton {
+    position: relative;
+    top: -110vh;
+    left: 58%;
+    height: 157px;
+    width: 157px;
+}
+
+
+
+/* пианинка
+.musicContainer {
+    width: auto;
+    padding: 20px;
+    margin-top: -90vh;
+    background: rgba(45, 35, 85, 0.1);
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-around;
+}
+
+/* "клавиши *//*
+.note, .sharp{
+ width: 580px;
+ display: flex;
+ justify-content: center;
+ gap: 10px;
+}
+.sharp {
+    position: absolute;
+    display: flex;
+    justify-content: space-around;
+    margin-right:-83px;
+}
+.mnone{
+    background-color: transparent !important;
+    box-shadow: none !important;
+}
+.musicNote {
+    width: 80px;
+    height: 300px;
+    background: #2d2355;
+    border-radius: 8px;
+    margin: 2px;
+    cursor: pointer;
+    transition: all 0.15s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.musicNote:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+.musicNote:active {
+    transform: translateY(5px) scale(0.98);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* диезы *//*
+.musicSharp {
+    width: 50px;
+    height: 180px;
+    background: #e0552d;
+    border-radius: 8px;
+    cursor: pointer;
+    z-index: 10;
+    transition: all 0.15s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+}
+
+.musicSharp:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+}
+
+.musicSharp:active {
+    transform: translateY(5px) scale(0.98);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* позиции диезов *//*
+.musicSharp:nth-child(8) {  
+    left: 60px;
+}
+.musicSharp:nth-child(9) {  
+    left: 145px;
+}
+.musicSharp:nth-child(10) { 
+    left: 305px;
+}
+.musicSharp:nth-child(11) { 
+    left: 390px;
+}
+.musicSharp:nth-child(12) { 
+    left: 475px;
+} */
+
+
+
+
+
+
+
+
