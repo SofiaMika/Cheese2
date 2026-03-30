@@ -36,15 +36,10 @@
     </div>
     <p class="bluTextsmall">КАЖЕТСЯ ЕДА ЗАКОНЧИЛАСЬ...</p>
     <div class="blockBlu"><div class="holodilnik">
-        <img src="images/emptyRefrigerator.svg" class="holodilnik" id="emptyFridge"></div>
-        <div class="cheesesContent">
-            <!-- <img src="images/cheese-1.svg" class="ch1">
-                        <img src="images/cheese-1.svg" class="ch2">
-            <img src="images/cheese-1.svg" class="ch3">
-            <img src="images/cheese-1.svg" class="ch4">
-                        <img src="images/cheese-1.svg" class="ch5">
-            <img src="images/cheese-1.svg" class="ch6"> -->
-        </div>
+        <img src="images/emptyRefrigerator.svg" class="holodilnik" id="emptyFridge">
+    <img src="images/holodilnickwithcheese.svg" class="holodilnik fridge hidden" id="fullFridge">
+    </div>
+       
 
     </div>
    <!-- Мышка которая исчезает -->
@@ -54,7 +49,12 @@
         <div class="score">Очки: <span id="score">0</span></div>
         <div id="maze"></div>
     </div>
-    
+        <div class="maze-controls">
+                    <button class="ctrl up" data-dir="up">↑</button>
+                    <button class="ctrl left" data-dir="left">←</button>
+                    <button class="ctrl down" data-dir="down">↓</button>
+                    <button class="ctrl right" data-dir="right">→</button>
+                  </div>
     <div><img src="images/returnbtn.svg" id="restartGame" class="restart-btn"></div>
 
          <div class="bluLineTwo">
@@ -64,7 +64,7 @@
             <div><img src="images/disco-igla.svg" class="disco-igla"></div>
             <div><img src="images/starrt.svg" class="startButton"></div>
             <div><img src="images/stop.svg" class="stopButton"></div> 
-            <audio id="player" src="audio/melodia.mp3"></audio>
+            <audio id="player" src="audio/мелодия 2.m4a"></audio>
             
           <div class="bluLineThree">
             <p class="capsText">МЫШИНАЯ ДИСКОТЕКА МЫШИНАЯ ДИСКОТЕКА</p>
@@ -91,5 +91,35 @@
         </div>
     </div>
 
+    <div class="bluTextbox"><p class="yellowTextsmall">Нажми на клавишу и сыграй любимую мелодию на дискотеке в Мышкине!</p></div>
+
+    <div class="bluwithCheese">
+        <div><img src="images/mouseRun.svg" class="mouseRun"></div>
+        <div class="cheeses">
+            <img src="images/cheese-1.svg" class="che-1">
+            <img src="images/cheese-1.svg" class="che-2">
+            <img src="images/cheese-1.svg" class="che-3">
+            <img src="images/cheese-1.svg" class="che-4">
+            <img src="images/cheese-1.svg" class="che-5">
+        </div>
+    </div>
+
+    <div class="twogameContainer">
+        <div>
+            <img src="images/recept.svg" class="recept">
+           <div class="buttonLike">
+    <img src="images/like.svg" class="like" id="like">
+    <p class="likeText" id="likeText">лайков: 0</p>
+</div>
+       <img src="images/chan.svg" class="chan">
+                <img src="images/mouse-cook.svg" class="mouseCook">
+
+    <footer>
+        <div class="bluLast">
+        <div><img src="images/шд лого short black 1.svg" class="logohse"></div><p class="teextfooter">Кураторы: Сергей Гриднев, Диана Ткачева <br>
+        студентка: БДЗ257 Плыгунова Софья</p>
+</div>
+    </footer>
+ 
 </body>
 </html>
