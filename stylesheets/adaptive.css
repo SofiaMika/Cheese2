@@ -1,0 +1,250 @@
+@media (max-width: 768px) {
+
+  .bluOne, .bluTwo {
+    width: 95%;
+    height: auto;
+  }
+
+  .logotype {
+    width: 80%;
+    margin: 20px auto;
+  }
+
+  .mouseLeft,
+  .mouseRigth {
+    display: none; /* убираем, мешают */
+  }
+
+  #button {
+    width: 150px;
+  }
+
+  .blockBlu {
+    width: 90%;
+    height: auto;
+    position: relative;
+    margin: 20px auto;
+  }
+
+  #game-container {
+    position: relative;
+    right: auto;
+    top: auto;
+    margin: 20px auto;
+  }
+
+  .restart-btn {
+    margin: 20px auto;
+    display: block;
+  }
+
+  .bluTextbox {
+    width: 90%;
+    left: 0;
+    margin: 20px auto;
+  }
+
+}
+
+@media (max-width: 1024px) {
+  .bluOne, .bluTwo {
+    width: 95%;
+  }
+
+  .mouseLeft,
+  .mouseRigth {
+    width: 200px;
+  }
+}
+
+@media (max-width: 768px) {
+
+  /* Общие контейнеры */
+  .bluOne, .bluTwo, .bluBla1, .bluBla2 {
+    width: 95%;
+    height: auto;
+    margin: 10px auto;
+    left: 0;
+    border-radius: 16px;
+  }
+
+  /* Логотип */
+  .logotype {
+    width: 80%;
+    height: auto;
+    margin: 20px auto;
+  }
+
+  /* Мышки убираем (мешают) */
+  .mouseLeft,
+  .mouseRigth,
+  .mouseScr2,
+  .mouseScrThree {
+    display: none;
+  }
+
+  /* Кнопки */
+  #button, #buttonNext {
+    position: relative;
+    width: 140px;
+    height: auto;
+    left: 50%;
+    top: auto;
+    transform: translateX(-50%);
+    margin: 20px 0;
+  }
+
+  /* Тексты */
+  .Text {
+    font-size: 22px;
+    top: 0;
+    left: 0;
+    padding: 15px;
+  }
+
+  .Text2 {
+    font-size: 20px;
+    top: 0;
+    left: 0;
+    padding: 15px;
+  }
+
+  p {
+    font-size: 16px;
+    left: 0;
+    top: 0;
+    padding: 10px;
+  }
+
+  /* Холодильник */
+  .holodilnik {
+    width: 80%;
+    position: relative;
+    margin: 20px auto;
+    transform: none;
+  }
+
+  /* Лабиринт */
+  #game-container {
+    position: relative;
+    top: auto;
+    right: auto;
+    margin: 20px auto;
+  }
+
+  #maze {
+    width: 90vw;
+    height: 90vw;
+    max-width: 300px;
+    max-height: 300px;
+  }
+
+  /* кнопки управления */
+  .maze-controls {
+    gap: 5px;
+  }
+
+  .maze-controls button {
+    font-size: 18px;
+  }
+
+  /* рестарт */
+  .restart-btn {
+    width: 180px;
+    margin: 20px auto;
+    display: block;
+  }
+  /* дискотека */
+  .disco-disk {
+    width: 250px;
+    height: 250px;
+    left: 50%;
+    top: auto;
+    margin: 40px auto;
+    transform: translateX(-50%);
+  }
+
+  .disco-igla {
+    display: none; /* на мобилке убираем */
+  }
+
+  .startButton,
+  .stopButton {
+    position: relative;
+    width: 100px;
+    height: auto;
+    margin: 10px;
+    top: 0;
+    left: 0;
+  }
+
+  /*пианино */
+  .musicContainer {
+    width: 95%;
+    margin: 40px auto;
+    padding: 10px;
+  }
+
+  .musicNote {
+    height: 120px;
+  }
+
+  .musicSharp {
+    height: 70px;
+  }
+
+  /* текст под пианино */
+  .bluTextbox {
+    width: 95%;
+    height: auto;
+    left: 0;
+    top: 0;
+    margin: 20px auto;
+  }
+
+  /* блок с сыром */
+  .bluwithCheese {
+    height: 50vh;
+  }
+
+  /* 🍽 рецепт */
+  .recept {
+    width: 95%;
+    left: 0;
+    margin: 20px auto;
+  }
+
+  .like {
+    left: 0;
+    top: 0;
+    margin: 10px auto;
+  }
+
+  .likeText {
+    position: static;
+    text-align: center;
+  }
+
+  /* 🧾 футер */
+  .bluLast {
+    height: auto;
+    padding: 20px;
+  }
+
+  .logohse {
+    position: relative;
+    width: 60%;
+    height: auto;
+    left: 0;
+    top: 0;
+    margin: 0 auto;
+  }
+
+  .teextfooter {
+    font-size: 16px;
+    left: 0;
+    top: 0;
+    text-align: center;
+  }
+
+}
