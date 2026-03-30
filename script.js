@@ -135,6 +135,15 @@ document.addEventListener('DOMContentLoaded', () => {
         e.preventDefault();
   }
     });
+     document.querySelectorAll(".maze-controls button").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const dir = btn.dataset.dir;
+      if (dir === "up") moveMouse(0, -1);
+      if (dir === "down") moveMouse(0, 1);
+      if (dir === "left") moveMouse(-1, 0);
+      if (dir === "right") moveMouse(1, 0);
+    });
+  });
     drawMaze();
     setTimeout(() => {
         gameStarted = true;
@@ -172,3 +181,159 @@ stopBtn.addEventListener('click', () => {
     audio.pause();
     audio.currentTime = 0; // вернуть в начало
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+    const whiteKeys = document.querySelectorAll('.musicNote');
+    const blackKeys = document.querySelectorAll('.musicSharp');
+    const allKeys = [...whiteKeys, ...blackKeys];  //массив
+    
+    const loadingText = document.createElement('div');
+    
+    loadingText.style.cssText = `
+        position: fixed;
+        top: 65%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: #EE4F28;
+        color: #ece94a;
+        padding: 20px 40px;
+        border-radius: 15px;
+        font-size: 26px;
+        z-index: 9999;
+        display: none;
+    `;
+    loadingText.textContent = 'Загрузка звуков...';
+    document.body.appendChild(loadingText);
+    
+    if (typeof Tone === 'undefined') {
+        console.error('Tone.js не загружен!');
+        alert('Ошибка: Tone.js не загружен! Добавь <script src="https://cdn.jsdelivr.net/npm/tone@14.8.49/build/Tone.js"></script> в HTML');
+        return;
+    }
+
+    console.log('Найдено клавиш:', allKeys.length);
+
+    let synth = null;
+    let isReady = false;
+
+    allKeys.forEach(key => {
+        key.addEventListener('click', async () => {
+            try {
+                if (!synth) {
+                    loadingText.style.display = 'block';
+                    
+                    await Tone.start();
+                    await Tone.context.resume();
+                    
+                    synth = new Tone.Sampler({
+                        urls: {
+                            "C4": "C4.mp3",
+                            "D#4": "Ds4.mp3",
+                            "F#4": "Fs4.mp3",
+                            "A4": "A4.mp3",
+                            "C5": "C5.mp3"
+                        },
+                        release: 2,
+                        baseUrl: "https://tonejs.github.io/audio/salamander/",
+                        
+                        onload: () => {
+                            console.log('Sampler готов!');
+                            isReady = true;
+                            loadingText.textContent = 'Готово!';
+                            setTimeout(() => {
+                                loadingText.style.display = 'none';
+                            }, 500);
+                        }
+                        
+                    }).toDestination();
+                    
+                    const reverb = new Tone.Reverb(1.5).toDestination();
+                    synth.connect(reverb);
+                    
+                    console.log('Sampler создан, загрузка');
+                }
+
+                if (!isReady) {
+                    console.log('Ещё загружается');
+                    return;
+                }
+
+                // нота из data-note
+                const note = key.dataset.note;
+                console.log('Играю:', note);
+                
+                //нота
+                synth.triggerAttackRelease(note, '2n');
+                
+                // вижуал эффект
+                const isBlackKey = key.classList.contains('musicSharp');
+                
+                if (isBlackKey) {
+                    //диезы
+                    key.style.backgroundColor = '#ff9966';
+                } else {
+                    // обычные клавиши
+                    key.style.backgroundColor = '#6b4fc2';
+                }
+                
+                setTimeout(() => {
+                    if (isBlackKey) {
+                        key.style.backgroundColor = '#e0552d';
+                    } else {
+                        key.style.backgroundColor = '#2d2355';
+                    }
+                }, 200);
+
+            } catch (error) {
+                console.error('Ошибка:', error);
+                loadingText.textContent = 'Ошибка загрузки';
+                loadingText.style.backgroundColor = '#e0552d';
+            }
+        });
+    });
+    document.addEventListener('keydown', (e) => {
+        if (!isReady) return;
+        
+        // Находим клавишу по data-key
+        const key = document.querySelector(`[data-key="${e.key}"]`);
+        
+        if (key) {
+            const note = key.dataset.note;
+            synth.triggerAttackRelease(note, '2n');
+            
+            // визуал
+            const isBlackKey = key.classList.contains('musicSharp');
+            key.style.backgroundColor = isBlackKey ? '#ff9966' : '#6b4fc2';
+            
+            setTimeout(() => {
+                key.style.backgroundColor = isBlackKey ? '#e0552d' : '#2d2355';
+            }, 200);
+            
+            console.log('Клавиша:', e.key, '→ Нота:', note);
+        }
+    });
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+const empty = document.getElementById('emptyFridge');
+const full = document.getElementById('fullFridge');
+
+// пример — через 3 секунды
+setTimeout(() => {
+    empty.classList.add('hidden');
+    full.classList.remove('hidden');
+}, 3000);
+});
+
+
+document.addEventListener('DOMContentLoaded', () => {
+let count = 0;
+const likeBtn = document.getElementById('like');
+const likeText = document.getElementById('likeText');
+
+likeBtn.addEventListener('click', () => {
+    count++;
+    likeText.textContent = 'лайков: ' + count;
+});
+});
+
